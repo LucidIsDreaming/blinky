@@ -11,11 +11,15 @@ int main() {
     bn::backdrop::set_color(bn::color(25,2,31));
 
 //if A button is pressed, change backdrop color to pastel pink
-    if(bn::keypad::a_pressed(0)){
+//EACH FRAME if A button is pressed, change backdrop color to pastel pink
+
+
+    while(true) { //loop forever
+
+    if(bn::keypad::a_pressed()){
         bn::backdrop::set_color(bn::color(31,21,22));
     }
-    
-    while(true) { //loop forever
+
     bn::core::update();
 
     
