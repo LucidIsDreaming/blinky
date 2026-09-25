@@ -3,13 +3,22 @@
 #include <bn_backdrop.h>
 #include <bn_color.h>
 #include <bn_core.h>
+#include <bn_keypad.h>
+
 
 int main() {
     bn::core::init();
-    bn::backdrop::set_color(bn::color(30,2,31));
+    bn::backdrop::set_color(bn::color(25,2,31));
 
+//if A button is pressed, change backdrop color to pastel pink
+    if(bn::keypad::a_pressed(0)){
+        bn::backdrop::set_color(bn::color(31,21,22));
+    }
+    
     while(true) { //loop forever
     bn::core::update();
+
+    
 }
 
 }
